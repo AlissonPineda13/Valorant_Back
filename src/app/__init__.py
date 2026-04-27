@@ -4,6 +4,8 @@ from app.extensions import db, migrate
 from flasgger import Swagger
 from .controllers.agent_controller import *
 from .controllers.weapon_controller import *
+from .commands.insert_agents import *
+from .commands.insert_weapons import *
 
 
 def create_app():
@@ -20,5 +22,8 @@ def create_app():
 
     # Swagger config
     swagger = Swagger(app)
+
+    app.cli.add_command(insert_agents)
+    app.cli.add_command(insert_weapons)
 
     return app
