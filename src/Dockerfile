@@ -7,7 +7,14 @@ ENV PYTHONUNBUFFERED=1
 WORKDIR /app
 
 # Copiar requirements primero (mejora cache)
-COPY requirements.txt .
+#COPY requirements.txt .
+
+RUN apt-get update && apt-get install -y \
+    gcc \
+    build-essential \
+    libpq-dev \
+    && rm -rf /var/lib/apt/lists/*
+
 
 # Instalar dependencias
 RUN pip install --no-cache-dir -r requirements.txt
