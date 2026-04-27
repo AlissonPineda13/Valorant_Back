@@ -8,4 +8,4 @@ flask insert_agents
 flask insert_weapons
 
 echo "Iniciando aplicación..."
-flask --app run run
+python run.py
