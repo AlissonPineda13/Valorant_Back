@@ -1,23 +1,23 @@
 FROM python:3.11-slim
 
-# Evita archivos .pyc y buffer
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
 WORKDIR /app
 
-# Copiar requirements primero (mejora cache)
+# Copiar requirements
 COPY src/requirements.txt .
-
 
 # Instalar dependencias
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copiar el resto del código
-COPY . .
+# Copiar solo src (mejor que copiar todo)
+COPY src/ .
 
-# Dar permisos al entrypoint
+# Copiar entrypoint explícitamente
+COPY entrypoint.sh .
+
+# Permisos
 RUN chmod +x entrypoint.sh
 
-# Ejecutar script inicial
 ENTRYPOINT ["./entrypoint.sh"]
