@@ -1,4 +1,8 @@
+import os
+
 from flask import Flask
+from flask.cli import load_dotenv
+from flask_cors import CORS
 from config import Config
 from app.extensions import db, migrate
 from flasgger import Swagger
@@ -9,8 +13,12 @@ from .commands.insert_weapons import *
 
 
 def create_app():
-    app = Flask(__name__)
+    app = Flask(__name__,static_folder="static")
+    CORS(app)
     app.config.from_object(Config)
+    # Configure apikey to be used on put, post, delete requests
+    load_dotenv()
+    API_KEY = os.getenv("API_KEY")
 
     db.init_app(app)
     migrate.init_app(app, db)

@@ -1,4 +1,5 @@
 from flask import Blueprint, jsonify, request
+from app.Security.api_key import require_api_key
 from app.models.agent import Agent
 from app.extensions import db
 from app.services.agent_service import *
@@ -36,6 +37,7 @@ def get_agents_route():
 
 
 @agent_bp.route('', methods=['POST'])
+@require_api_key
 def post_agent_route():
     """
     Post a new agents
@@ -45,6 +47,11 @@ def post_agent_route():
     consumes:
       - application/json
     parameters:
+      - in: header
+        name: X-API-KEY
+        type: string
+        required: true
+        description: API Key for write operations
       - in: body
         name: body
         required: true
@@ -95,6 +102,7 @@ def post_agent_route():
 
 
 @agent_bp.route('/<int:id>', methods=['PUT'])
+@require_api_key
 def update_agent_route(id):
     """
     Update an agent
@@ -102,6 +110,11 @@ def update_agent_route(id):
     tags:
       - Agents
     parameters:
+      - in: header
+        name: X-API-KEY
+        type: string
+        required: true
+        description: API Key for write operations
       - in: path
         name: id
         type: integer
@@ -152,6 +165,7 @@ def update_agent_route(id):
 
 
 @agent_bp.route('/<int:id>', methods=['DELETE'])
+@require_api_key
 def delete_agent_route(id):
     """
     Delete an agent
@@ -159,6 +173,11 @@ def delete_agent_route(id):
     tags:
       - Agents
     parameters:
+      - in: header
+        name: X-API-KEY
+        type: string
+        required: true
+        description: API Key for write operations
       - in: path
         name: id
         type: integer
