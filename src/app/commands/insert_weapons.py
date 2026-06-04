@@ -8,7 +8,6 @@ from app.extensions import db
 @with_appcontext
 def insert_weapons():
     weapons = [
-        # SIDEARMS
         {
             "name": "Classic",
             "category": "Sidearm",
@@ -16,7 +15,7 @@ def insert_weapons():
             "body_damage": 26,
             "leg_damage": 22,
             "price": 0,
-            "image": "https://media.valorant-api.com/weapons/classic.png"
+            "image": "classic.webp"
         },
         {
             "name": "Shorty",
@@ -25,7 +24,7 @@ def insert_weapons():
             "body_damage": 12,
             "leg_damage": 10,
             "price": 150,
-            "image": "https://media.valorant-api.com/weapons/shorty.png"
+            "image": "shorty.webp"
         },
         {
             "name": "Frenzy",
@@ -34,7 +33,7 @@ def insert_weapons():
             "body_damage": 26,
             "leg_damage": 22,
             "price": 450,
-            "image": "https://media.valorant-api.com/weapons/frenzy.png"
+            "image": "frenzy.webp"
         },
         {
             "name": "Ghost",
@@ -43,7 +42,7 @@ def insert_weapons():
             "body_damage": 30,
             "leg_damage": 25,
             "price": 500,
-            "image": "https://media.valorant-api.com/weapons/ghost.png"
+            "image": "ghost.webp"
         },
         {
             "name": "Sheriff",
@@ -52,10 +51,8 @@ def insert_weapons():
             "body_damage": 55,
             "leg_damage": 47,
             "price": 800,
-            "image": "https://media.valorant-api.com/weapons/sheriff.png"
+            "image": "sheriff.webp"
         },
-
-        # SMGS
         {
             "name": "Stinger",
             "category": "SMG",
@@ -63,7 +60,7 @@ def insert_weapons():
             "body_damage": 27,
             "leg_damage": 23,
             "price": 1100,
-            "image": "https://media.valorant-api.com/weapons/stinger.png"
+            "image": "stinger.webp"
         },
         {
             "name": "Spectre",
@@ -72,10 +69,8 @@ def insert_weapons():
             "body_damage": 26,
             "leg_damage": 22,
             "price": 1600,
-            "image": "https://media.valorant-api.com/weapons/spectre.png"
+            "image": "spectre.webp"
         },
-
-        # SHOTGUNS
         {
             "name": "Bucky",
             "category": "Shotgun",
@@ -83,7 +78,7 @@ def insert_weapons():
             "body_damage": 20,
             "leg_damage": 17,
             "price": 850,
-            "image": "https://media.valorant-api.com/weapons/bucky.png"
+            "image": "bucky.webp"
         },
         {
             "name": "Judge",
@@ -92,10 +87,8 @@ def insert_weapons():
             "body_damage": 17,
             "leg_damage": 14,
             "price": 1850,
-            "image": "https://media.valorant-api.com/weapons/judge.png"
+            "image": "judge.webp"
         },
-
-        # RIFLES
         {
             "name": "Bulldog",
             "category": "Rifle",
@@ -103,7 +96,7 @@ def insert_weapons():
             "body_damage": 35,
             "leg_damage": 29,
             "price": 2050,
-            "image": "https://media.valorant-api.com/weapons/bulldog.png"
+            "image": "bulldog.webp"
         },
         {
             "name": "Guardian",
@@ -112,7 +105,7 @@ def insert_weapons():
             "body_damage": 65,
             "leg_damage": 49,
             "price": 2250,
-            "image": "https://media.valorant-api.com/weapons/guardian.png"
+            "image": "guardian.webp"
         },
         {
             "name": "Phantom",
@@ -121,7 +114,7 @@ def insert_weapons():
             "body_damage": 39,
             "leg_damage": 33,
             "price": 2900,
-            "image": "https://media.valorant-api.com/weapons/phantom.png"
+            "image": "phantom.webp"
         },
         {
             "name": "Vandal",
@@ -130,10 +123,8 @@ def insert_weapons():
             "body_damage": 40,
             "leg_damage": 34,
             "price": 2900,
-            "image": "https://media.valorant-api.com/weapons/vandal.png"
+            "image": "vandal.webp"
         },
-
-        # SNIPERS
         {
             "name": "Marshal",
             "category": "Sniper",
@@ -141,7 +132,16 @@ def insert_weapons():
             "body_damage": 101,
             "leg_damage": 85,
             "price": 950,
-            "image": "https://media.valorant-api.com/weapons/marshal.png"
+            "image": "marshal.webp"
+        },
+        {
+            "name": "Outlaw",
+            "category": "Sniper",
+            "head_damage": 238,
+            "body_damage": 140,
+            "leg_damage": 119,
+            "price": 2400,
+            "image": "outlaw.webp"
         },
         {
             "name": "Operator",
@@ -150,10 +150,8 @@ def insert_weapons():
             "body_damage": 150,
             "leg_damage": 127,
             "price": 4700,
-            "image": "https://media.valorant-api.com/weapons/operator.png"
+            "image": "operator.webp"
         },
-
-        # HEAVY
         {
             "name": "Ares",
             "category": "Heavy",
@@ -161,7 +159,7 @@ def insert_weapons():
             "body_damage": 30,
             "leg_damage": 25,
             "price": 1600,
-            "image": "https://media.valorant-api.com/weapons/ares.png"
+            "image": "ares.webp"
         },
         {
             "name": "Odin",
@@ -170,10 +168,9 @@ def insert_weapons():
             "body_damage": 38,
             "leg_damage": 32,
             "price": 3200,
-            "image": "https://media.valorant-api.com/weapons/odin.png"
+            "image": "odin.webp"
         }
-    ]
-
+    ]   
     for data in weapons:
         exists = Weapon.query.filter_by(name=data["name"]).first()
         if not exists:
