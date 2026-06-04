@@ -10,147 +10,165 @@ def insert_agents():
     agents = [
         {
             "name": "Brimstone",
-            "description": "Controls the battlefield with orbital smokes and tactical abilities.",
+            "description": "A strategic Controller who deploys orbital smokes, incendiary grenades, and team-wide combat support.",
             "role": "Controller",
-            "image": "https://media.valorant-api.com/agents/brimstone.png"
+            "image": "brimstone.webp"
         },
         {
             "name": "Phoenix",
-            "description": "A duelist with fire-based abilities who can heal himself.",
+            "description": "A self-sufficient Duelist who manipulates fire to heal himself and aggressively take fights.",
             "role": "Duelist",
-            "image": "https://media.valorant-api.com/agents/phoenix.png"
+            "image": "phoenix.webp"
         },
         {
             "name": "Sage",
-            "description": "A support agent capable of healing and reviving allies.",
+            "description": "A defensive Sentinel capable of healing allies, creating barriers, and resurrecting teammates.",
             "role": "Sentinel",
-            "image": "https://media.valorant-api.com/agents/sage.png"
+            "image": "sage.webp"
         },
         {
             "name": "Sova",
-            "description": "A scout who tracks enemies using reconnaissance arrows.",
+            "description": "An Initiator who gathers intelligence and reveals enemy positions with advanced reconnaissance tools.",
             "role": "Initiator",
-            "image": "https://media.valorant-api.com/agents/sova.png"
+            "image": "sova.webp"
         },
         {
             "name": "Viper",
-            "description": "Controls areas using poison and toxic gas.",
+            "description": "A Controller who dominates areas using toxic screens, poison clouds, and chemical warfare.",
             "role": "Controller",
-            "image": "https://media.valorant-api.com/agents/viper.png"
+            "image": "viper.webp"
         },
         {
             "name": "Cypher",
-            "description": "Monitors areas using traps and surveillance cameras.",
+            "description": "A surveillance-focused Sentinel who secures sites with traps, cameras, and information gathering.",
             "role": "Sentinel",
-            "image": "https://media.valorant-api.com/agents/cypher.png"
+            "image": "cypher.webp"
         },
         {
             "name": "Reyna",
-            "description": "A duelist who grows stronger by eliminating enemies.",
+            "description": "A snowballing Duelist who thrives on eliminations to heal, dismiss, and empower herself.",
             "role": "Duelist",
-            "image": "https://media.valorant-api.com/agents/reyna.png"
+            "image": "reyna.webp"
         },
         {
             "name": "Killjoy",
-            "description": "Defends areas using turrets and advanced gadgets.",
+            "description": "A technology expert Sentinel who locks down areas using turrets, alarms, and nanoswarms.",
             "role": "Sentinel",
-            "image": "https://media.valorant-api.com/agents/killjoy.png"
+            "image": "killjoy.webp"
         },
         {
             "name": "Breach",
-            "description": "Initiates attacks with abilities that go through walls.",
+            "description": "An Initiator who disrupts enemies through walls with powerful concussive and crowd-control abilities.",
             "role": "Initiator",
-            "image": "https://media.valorant-api.com/agents/breach.png"
+            "image": "breach.webp"
         },
         {
             "name": "Omen",
-            "description": "Moves through shadows and blocks vision.",
+            "description": "A mysterious Controller who manipulates shadows to teleport, blind opponents, and block vision.",
             "role": "Controller",
-            "image": "https://media.valorant-api.com/agents/omen.png"
+            "image": "omen.webp"
         },
         {
             "name": "Jett",
-            "description": "High mobility and deadly precision.",
+            "description": "A highly mobile Duelist who excels at quick engagements, evasive movement, and precise eliminations.",
             "role": "Duelist",
-            "image": "https://media.valorant-api.com/agents/jett.png"
+            "image": "jett.webp"
         },
         {
             "name": "Raze",
-            "description": "An explosive expert.",
+            "description": "An explosive Duelist who overwhelms enemies with grenades, rockets, and destructive firepower.",
             "role": "Duelist",
-            "image": "https://media.valorant-api.com/agents/raze.png"
+            "image": "raze.webp"
         },
         {
             "name": "Skye",
-            "description": "Supports the team with healing and tracking abilities.",
+            "description": "An Initiator who supports teammates with healing, scouting creatures, and area control.",
             "role": "Initiator",
-            "image": "https://media.valorant-api.com/agents/skye.png"
+            "image": "skye.webp"
         },
         {
             "name": "Yoru",
-            "description": "Deceives enemies using teleportation and tricks.",
+            "description": "A deceptive Duelist who uses teleportation, fakeouts, and dimensional abilities to outplay opponents.",
             "role": "Duelist",
-            "image": "https://media.valorant-api.com/agents/yoru.png"
+            "image": "yoru.webp"
         },
         {
             "name": "Astra",
-            "description": "Controls the map using cosmic energy.",
+            "description": "A cosmic Controller who shapes the battlefield with stars, gravity wells, and powerful utility.",
             "role": "Controller",
-            "image": "https://media.valorant-api.com/agents/astra.png"
+            "image": "astra.webp"
         },
         {
             "name": "KAY/O",
-            "description": "Suppresses enemy abilities.",
+            "description": "A machine Initiator designed to suppress enemy abilities and create openings for his team.",
             "role": "Initiator",
-            "image": "https://media.valorant-api.com/agents/kayo.png"
+            "image": "kayo.webp"
         },
         {
             "name": "Chamber",
-            "description": "A sharpshooter with defensive gadgets.",
+            "description": "A precision-focused Sentinel who combines deadly firearms with tactical defensive tools.",
             "role": "Sentinel",
-            "image": "https://media.valorant-api.com/agents/chamber.png"
+            "image": "chamber.webp"
         },
         {
             "name": "Neon",
-            "description": "Extreme speed and electric-based attacks.",
+            "description": "An electrifying Duelist who uses unmatched speed and energy-powered abilities to pressure enemies.",
             "role": "Duelist",
-            "image": "https://media.valorant-api.com/agents/neon.png"
+            "image": "neon.webp"
         },
         {
             "name": "Fade",
-            "description": "Reveals enemies using fear-based abilities.",
+            "description": "An Initiator who hunts opponents through fear, revealing and tracking enemies across the map.",
             "role": "Initiator",
-            "image": "https://media.valorant-api.com/agents/fade.png"
+            "image": "fade.webp"
         },
         {
             "name": "Harbor",
-            "description": "Controls water to block vision and protect areas.",
+            "description": "A Controller who commands water-based abilities to shield allies and reshape sightlines.",
             "role": "Controller",
-            "image": "https://media.valorant-api.com/agents/harbor.png"
+            "image": "harbor.webp"
         },
         {
             "name": "Gekko",
-            "description": "Summons creatures to attack and control areas.",
+            "description": "An Initiator who fights alongside a team of unique creatures that scout, stun, and disrupt enemies.",
             "role": "Initiator",
-            "image": "https://media.valorant-api.com/agents/gekko.png"
+            "image": "gekko.webp"
         },
         {
             "name": "Deadlock",
-            "description": "Controls areas with advanced trapping technology.",
+            "description": "A Sentinel who uses advanced nanowire technology to trap, isolate, and stop enemy advances.",
             "role": "Sentinel",
-            "image": "https://media.valorant-api.com/agents/deadlock.png"
+            "image": "deadlock.webp"
         },
         {
             "name": "Iso",
-            "description": "A duelist focused on isolated one-on-one fights.",
+            "description": "A Duelist who specializes in isolated engagements, shielding himself and forcing direct confrontations.",
             "role": "Duelist",
-            "image": "https://media.valorant-api.com/agents/iso.png"
+            "image": "iso.webp"
         },
         {
             "name": "Clove",
-            "description": "A controller with death-related abilities.",
+            "description": "A Controller who bends the rules of life and death, remaining impactful even after being eliminated.",
             "role": "Controller",
-            "image": "https://media.valorant-api.com/agents/clove.png"
+            "image": "clove.webp"
+        },
+        {
+            "name": "Vyse",
+            "description": "A Sentinel who manipulates liquid metal to trap enemies, control space, and punish aggressive pushes.",
+            "role": "Sentinel",
+            "image": "vyse.webp"
+        },
+        {
+            "name": "Tejo",
+            "description": "A tactical Initiator who uses guided missiles and advanced military technology to reveal and pressure opponents.",
+            "role": "Initiator",
+            "image": "tejo.webp"
+        },
+        {
+            "name": "Waylay",
+            "description": "A fast-paced Duelist who bends light to overwhelm enemies with speed, mobility, and aggressive engagements.",
+            "role": "Duelist",
+            "image": "waylay.webp"
         }
     ]
 

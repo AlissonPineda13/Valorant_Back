@@ -1,4 +1,5 @@
 from flask import Blueprint, jsonify, request
+from app.Security.api_key import require_api_key
 from app.models.weapon import Weapon
 from app.extensions import db
 from app.services.weapon_service import *
@@ -36,6 +37,7 @@ def get_weapons_route():
 
 
 @weapon_bp.route('', methods=['POST'])
+@require_api_key
 def post_weapon_route():
     """
     Post a new weapon
@@ -45,6 +47,11 @@ def post_weapon_route():
     consumes:
       - application/json
     parameters:
+      - in: header
+        name: X-API-KEY
+        type: string
+        required: true
+        description: API Key for write operations
       - in: body
         name: body
         required: true
@@ -115,6 +122,7 @@ def post_weapon_route():
 
 
 @weapon_bp.route('/<int:id>', methods=['PUT'])
+@require_api_key
 def update_weapon_route(id):
     """
     Update an weapon
@@ -122,6 +130,11 @@ def update_weapon_route(id):
     tags:
       - Weapons
     parameters:
+      - in: header
+        name: X-API-KEY
+        type: string
+        required: true
+        description: API Key for write operations
       - in: path
         name: id
         type:  number
@@ -184,6 +197,7 @@ def update_weapon_route(id):
 
 
 @weapon_bp.route('/<int:id>', methods=['DELETE'])
+@require_api_key
 def delete_weapon_route(id):
     """
     Delete an weapon
@@ -191,6 +205,11 @@ def delete_weapon_route(id):
     tags:
       - Weapons
     parameters:
+      - in: header
+        name: X-API-KEY
+        type: string
+        required: true
+        description: API Key for write operations
       - in: path
         name: id
         type:  number
