@@ -18,7 +18,6 @@ def create_app():
     app.config.from_object(Config)
     # Configure apikey to be used on put, post, delete requests
     load_dotenv()
-    API_KEY = os.getenv("API_KEY")
 
     db.init_app(app)
     migrate.init_app(app, db)
